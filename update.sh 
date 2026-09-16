@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#	update.sh
+#	Script macht automatisch ein Update der Paketlisten,
+#	anschliessend ein Upgrade und ein Full-Upgrade.
+#	Zum Schluss werden die nicht mehr benoetigten Pakete geloescht.
+#	Author: S.Grade
+#	Version: 20250719
+
+echo ""
+echo -e "\033[31m========== u p d a t e ==========\033[0m"
+echo ""
+apt update
+
+sleep 2s
+echo ""
+echo ""
+echo -e "\033[31m========== u p g r a d e ==========\033[0m"
+echo ""
+apt upgrade
+
+sleep 2s
+echo ""
+echo ""
+echo -e "\033[31m========== a u t o r e m o v e ==========\033[0m"
+echo ""
+apt autoremove
